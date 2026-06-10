@@ -1,0 +1,583 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Inviteasily — WhatsApp ile Davet ve Katılım Yönetimi</title>
+<meta name="description" content="Düğün ve davet salonları için WhatsApp'tan davet gönderin, yapay zekâ ile kaç kişinin geleceğini otomatik takip edin. Boşa giden masrafa son.">
+<link rel="icon" href="assets/logo/InviteEasily-icon-navy.svg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,500;1,600&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<!-- ============ HEADER ============ -->
+<header class="site-header" id="header">
+  <div class="container nav">
+    <a href="#top" class="nav-logo" aria-label="Inviteasily ana sayfa">
+      <img src="assets/logo/InviteEasily-logo-cream.svg" alt="Inviteasily">
+    </a>
+    <nav class="nav-links" aria-label="Ana menü">
+      <a href="#nasil">Nasıl Çalışır</a>
+      <a href="#ozellikler">Özellikler</a>
+      <a href="#neden">Neden Inviteasily</a>
+      <a href="#sss">SSS</a>
+    </nav>
+    <div class="nav-cta">
+      <a href="#demo" class="btn btn-gold">Demo İste</a>
+      <button class="nav-toggle" id="navToggle" aria-label="Menüyü aç/kapat">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+      </button>
+    </div>
+  </div>
+</header>
+<nav class="mobile-menu" id="mobileMenu" aria-label="Mobil menü">
+  <a href="#nasil">Nasıl Çalışır</a>
+  <a href="#ozellikler">Özellikler</a>
+  <a href="#neden">Neden Inviteasily</a>
+  <a href="#sss">SSS</a>
+  <a href="#demo" class="btn btn-gold">Demo İste</a>
+</nav>
+
+<a name="top"></a>
+
+<!-- ============ HERO ============ -->
+<section class="hero">
+  <div class="container hero-grid">
+    <div class="hero-copy">
+      <div class="hero-badges">
+        <span class="hero-badge"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/></svg>WhatsApp</span>
+        <span class="hero-badge"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2a2 2 0 0 1 2 2c0 .74-.4 1.39-1 1.73V7h1a7 7 0 0 1 7 7h1a1 1 0 0 1 1 1v3a1 1 0 0 1-1 1h-1v1a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2v-1H3a1 1 0 0 1-1-1v-3a1 1 0 0 1 1-1h1a7 7 0 0 1 7-7h1V5.73c-.6-.34-1-.99-1-1.73a2 2 0 0 1 2-2z"/><circle cx="8.5" cy="14.5" r="1.2" fill="currentColor" stroke="none"/><circle cx="15.5" cy="14.5" r="1.2" fill="currentColor" stroke="none"/></svg>Yapay Zekâ Destekli</span>
+        <span class="hero-badge"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 8v4l3 2"/><circle cx="12" cy="12" r="9"/></svg>Gerçek Zamanlı</span>
+      </div>
+      <h1>Davetlerinizi WhatsApp'tan gönderin,<br>kaç kişinin geleceğini <span class="gold">yapay zekâ</span> söylesin.</h1>
+      <p class="hero-sub">Düğün ve davet salonları için davet & katılım yönetimi. Manuel takip yok, son ana kadar belirsizlik yok, boşa giden masraf yok.</p>
+      <div class="hero-actions">
+        <a href="#demo" class="btn btn-gold btn-lg">Ücretsiz Demo İste
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+        </a>
+        <a href="#nasil" class="btn-text">Nasıl çalışır? <span class="arrow"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></a>
+      </div>
+      <div class="hero-trust">
+        <span>Türkçe'ye optimize</span><span class="dot"></span>
+        <span>Dakikalar içinde kurulum</span><span class="dot"></span>
+        <span>Verileriniz izole &amp; güvenli</span>
+      </div>
+    </div>
+
+    <!-- Animated phone + panel demo -->
+    <div class="hero-demo">
+      <div class="phone">
+        <div class="phone-screen">
+          <div class="wa-top">
+            <div class="wa-avatar">A</div>
+            <div>
+              <div class="wa-name">Ayyıldız Wedding Hall</div>
+              <div class="wa-status">çevrimiçi</div>
+            </div>
+          </div>
+          <div class="wa-body" id="waBody">
+            <!-- messages injected by script -->
+          </div>
+        </div>
+      </div>
+      <!-- floating panel that receives the parsed result -->
+      <div class="hero-panel" id="heroPanel">
+        <div class="hero-panel-h"><span class="live"></span> Katılım Durumu · Canlı</div>
+        <div class="hero-panel-row">
+          <div class="hp-ava">FA</div>
+          <div class="hp-meta"><div class="hp-name">Furkan Ayyıldız</div><div class="hp-sub">+90 555 444 33 22</div></div>
+          <span class="pill pill-green">Geliyor · 3</span>
+        </div>
+        <div class="hero-panel-row">
+          <div class="hp-ava">AY</div>
+          <div class="hp-meta"><div class="hp-name">Ayşe (ek davetli)</div><div class="hp-sub">AI tarafından eklendi</div></div>
+          <span class="pill pill-amber">Yeni</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ TRUST STRIP ============ -->
+<div class="trust-strip bg-white">
+  <div class="container">
+    <div class="row">
+      <span class="item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/></svg>WhatsApp üzerinden gönderim</span>
+      <span class="item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="16" rx="2"/><path d="M3 10h18M8 4v4M16 4v4"/></svg>Takvim &amp; etkinlik yönetimi</span>
+      <span class="item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 8v4l3 2"/><circle cx="12" cy="12" r="9"/></svg>Gerçek zamanlı katılım</span>
+      <span class="item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>İzole &amp; güvenli veri</span>
+    </div>
+  </div>
+</div>
+
+<!-- ============ PROBLEM ============ -->
+<section class="section bg-ivory" id="problem">
+  <div class="container">
+    <div class="section-head center reveal">
+      <span class="eyebrow center">Tanıdık geldi mi?</span>
+      <h2 class="display">500 kişilik davete<br>800 kişilik hazırlık mı yapıyorsunuz?</h2>
+      <p class="lead">Davetlilere tek tek "geliyor musunuz?" diye sormak; cevapları bir Excel'de kovalamak; etkinliğe günler kala bile net sayıyı bilememek. Tanıdık bir tablo.</p>
+    </div>
+    <div class="pain-grid">
+      <div class="pain-card reveal d1">
+        <div class="pain-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></svg></div>
+        <h3>Dağınık manuel takip</h3>
+        <p>Yüzlerce davetliyi telefonla arayıp WhatsApp'tan tek tek yazıp, cevapları elle bir tabloya işlemek günler alıyor.</p>
+        <div class="pain-stat">Saatlerce telefon trafiği</div>
+      </div>
+      <div class="pain-card reveal d2">
+        <div class="pain-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="9"/><path d="M12 8v4M12 16h.01"/></svg></div>
+        <h3>Son ana kadar belirsizlik</h3>
+        <p>Etkinliğe günler kala bile kaç kişinin geleceği net değil. "Acaba yeter mi?" stresi salon ekibinin üzerinden hiç kalkmıyor.</p>
+        <div class="pain-stat">Sürekli belirsizlik &amp; stres</div>
+      </div>
+      <div class="pain-card reveal d3">
+        <div class="pain-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg></div>
+        <h3>Boşa giden masraf</h3>
+        <p>Gelmeyecek misafir için fazladan yemek, masa, ikram ve personel. Eksik hazırlık ise itibar kaybı riski demek.</p>
+        <div class="pain-stat">Fazla yemek &amp; masa masrafı</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ HOW IT WORKS ============ -->
+<section class="section bg-white" id="nasil">
+  <div class="container">
+    <div class="section-head center reveal">
+      <span class="eyebrow center">Nasıl Çalışır</span>
+      <h2 class="display">Dört adımda, baştan sona otomatik</h2>
+      <p class="lead">Davetli listesini yüklemekten net katılım sayısını görmeye kadar her şey tek panelden yürür.</p>
+    </div>
+    <div class="steps">
+      <div class="step reveal d1">
+        <div class="step-num">1</div>
+        <div class="step-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><path d="M7 10l5 5 5-5M12 15V3"/></svg></div>
+        <h3>Listeyi yükleyin</h3>
+        <p>Excel'den içe aktarın ya da manuel ekleyin. İsim, telefon ve kaç kişilik davetli olduğu girilir.</p>
+      </div>
+      <div class="step reveal d2">
+        <div class="step-num">2</div>
+        <div class="step-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 2L11 13M22 2l-7 20-4-9-9-4 20-7z"/></svg></div>
+        <h3>Tek tıkla gönderin</h3>
+        <p>Sistem her davetliye, ismini ve kişi sayısını içeren kişiselleştirilmiş daveti WhatsApp'tan otomatik yollar.</p>
+      </div>
+      <div class="step reveal d3">
+        <div class="step-num">3</div>
+        <div class="step-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg></div>
+        <h3>Davetli serbestçe yazsın</h3>
+        <p>"Geliyoruz 3 kişi", "katılamayacağım" gibi normal Türkçe mesajlar. Yapay zekâ mesajı yorumlar.</p>
+      </div>
+      <div class="step reveal d4">
+        <div class="step-num">4</div>
+        <div class="step-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 3v18h18"/><path d="M7 14l4-4 3 3 5-6"/></svg></div>
+        <h3>Panel anlık güncellensin</h3>
+        <p>Kim geliyor, kim gelmiyor, kaç koltuk kesinleşti — hepsi gerçek zamanlı panele düşer.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ AI SPOTLIGHT ============ -->
+<section class="section ai-spot bg-navy" id="ai">
+  <div class="container">
+    <div class="ai-grid">
+      <div class="reveal">
+        <span class="eyebrow center" style="--x:0">Ürünün yıldızı</span>
+        <h2 class="display" style="color:#fff; font-size:clamp(28px,3.6vw,44px); margin-top:16px;">Davetliniz normal yazsın,<br><span style="color:var(--gold-300); font-style:italic;">yapay zekâ</span> anlasın.</h2>
+        <p class="lead" style="color:#BAC4D4; margin-top:18px;">Karmaşık formlar veya "1'e basın, 2'ye basın" yok. Davetli tıpkı bir arkadaşına yazar gibi cevap verir; gerisini yapay zekâ halleder.</p>
+
+        <ul class="ai-points">
+          <li>
+            <span class="pico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2a10 10 0 1 0 10 10A10 10 0 0 0 12 2z"/><path d="M9 12l2 2 4-4"/></svg></span>
+            <div><h4>Ek davetli yakalama</h4><p>"Eşim Ayşe ile geleceğiz" → Ayşe otomatik listeye eklenir, koltuk sayısı güncellenir.</p></div>
+          </li>
+          <li>
+            <span class="pico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg></span>
+            <div><h4>Soru-cevap botu</h4><p>"Otopark var mı?", "Saat kaçta?" — davetli sorar, AI salonun tanımladığı bilgilerle yanıtlar.</p></div>
+          </li>
+          <li>
+            <span class="pico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 8V4H8M4 12H2m6.34-5.66L6.93 4.93M3 12a9 9 0 1 0 9-9"/></svg></span>
+            <div><h4>Konuşma hafızası</h4><p>AI her yeni cevapta önceki tüm mesaj geçmişini bağlam olarak kullanır, kopukluk yaşatmaz.</p></div>
+          </li>
+          <li>
+            <span class="pico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 18V5l12-2v13"/><circle cx="6" cy="18" r="3"/><circle cx="18" cy="16" r="3"/></svg></span>
+            <div><h4>Akıllı susma</h4><p>Karşılıklı mesaj belirli sayıyı aşınca AI son bir bilgilendirme yapıp susar — gereksiz sohbet olmaz.</p></div>
+          </li>
+        </ul>
+      </div>
+
+      <div class="ai-stage reveal d1">
+        <div class="ai-row" id="aiChat"><!-- chat injected by script --></div>
+        <div class="ai-result" id="aiResult">
+          <span class="label">AI sonucu</span>
+          <span class="chip ok"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg>Geliyor</span>
+          <span class="chip"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/></svg>3 kişi</span>
+          <span class="chip add"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12h14"/></svg>Ayşe eklendi</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ FEATURES ============ -->
+<section class="section bg-white" id="ozellikler">
+  <div class="container">
+    <div class="section-head center reveal">
+      <span class="eyebrow center">Özellikler</span>
+      <h2 class="display">Bir etkinliği baştan sona yönetmek için<br>ihtiyacınız olan her şey</h2>
+    </div>
+    <div class="feat-grid">
+      <div class="feat-card reveal d1">
+        <div class="feat-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><path d="M14 2v6h6M9 13h6M9 17h4"/></svg></div>
+        <h3>Excel ile içe aktarma</h3>
+        <p>Dosyayı sürükleyin; önizleme tablosunda hatalı/eksik satırlar renklenir, satır içi düzeltebilirsiniz.</p>
+      </div>
+      <div class="feat-card reveal d2">
+        <div class="feat-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></svg></div>
+        <h3>Akıllı telefon doğrulama</h3>
+        <p>Farklı formatlar (0555…, +90 555…) otomatik olarak standarda çevrilir, aynı kişi iki kez eklenmez.</p>
+      </div>
+      <div class="feat-card reveal d3">
+        <div class="feat-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-10 5L2 7"/></svg></div>
+        <h3>Kişiselleştirilmiş davet</h3>
+        <p>İsim, çift, tarih, saat ve salon adı her mesaja otomatik gömülür. Şablonu istediğiniz gibi düzenleyin.</p>
+      </div>
+      <div class="feat-card reveal d1">
+        <div class="feat-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/><path d="M9.1 9a3 3 0 0 1 5.8 1c0 2-3 3-3 3"/><path d="M12 17h.01"/></svg></div>
+        <h3>Soru-cevap botu</h3>
+        <p>Davetlinin sorularını AI, salonun tanımladığı bilgilerle yanıtlar. Bilmediğini uydurmaz.</p>
+      </div>
+      <div class="feat-card reveal d2">
+        <div class="feat-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 3v18h18"/><rect x="7" y="12" width="3" height="6"/><rect x="12" y="8" width="3" height="10"/><rect x="17" y="5" width="3" height="13"/></svg></div>
+        <h3>Gerçek zamanlı panel</h3>
+        <p>Cevaplar geldiği anda dashboard'da görünür. Geliyor / gelmiyor / belirsiz, hepsi tek bakışta.</p>
+      </div>
+      <div class="feat-card reveal d3">
+        <div class="feat-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75"/></svg></div>
+        <h3>Ek davetli takibi</h3>
+        <p>"Yanımda 2 kişi getireceğim" diyen davetlinin getirdiklerini AI otomatik listeye ekler.</p>
+      </div>
+      <div class="feat-card reveal d1">
+        <div class="feat-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4M8 2v4M3 10h18"/></svg></div>
+        <h3>Takvim &amp; etkinlik yönetimi</h3>
+        <p>Aylık takvimde renk kodlu etkinlikler, hızlı ekleme ve etkinlik detayında dört sekmelik yönetim.</p>
+      </div>
+      <div class="feat-card reveal d2">
+        <div class="feat-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg></div>
+        <h3>Güvenli &amp; izole veri</h3>
+        <p>E-posta + şifre ile korumalı giriş. Her salon yalnızca kendi verisini görür.</p>
+      </div>
+      <div class="feat-card reveal d3">
+        <div class="feat-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2l2.4 7.4H22l-6 4.6 2.3 7.4-6.3-4.6L5.7 21.4 8 14 2 9.4h7.6z"/></svg></div>
+        <h3>Salon kendi reklamını yapar</h3>
+        <p>Binlerce kişiye salon adıyla mesaj gitmesi, salonunuz için organik bir tanıtım etkisi yaratır.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ SHOWCASE ============ -->
+<section class="section bg-ivory" id="vitrin">
+  <div class="container">
+    <div class="section-head center reveal">
+      <span class="eyebrow center">Panelden görünüm</span>
+      <h2 class="display">Sade, güvenilir, kullanması kolay</h2>
+      <p class="lead">Hiçbir teknik bilgi gerektirmeyen, salon ekibinizin ilk gün rahatça kullanabileceği bir panel.</p>
+    </div>
+
+    <div class="showcase-tabs reveal">
+      <!-- Tab menu -->
+      <div class="tabs-menu" role="tablist" aria-label="Panel ekranları">
+        <button class="tab-item is-active" role="tab" aria-selected="true" data-tab="0">
+          <span class="tab-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="7" height="9" rx="1"/><rect x="14" y="3" width="7" height="5" rx="1"/><rect x="14" y="12" width="7" height="9" rx="1"/><rect x="3" y="16" width="7" height="5" rx="1"/></svg></span>
+          <span class="tab-text"><b>Genel Bakış</b><span>Özet kartları, yaklaşan etkinlikler ve son aktiviteler tek ekranda.</span></span>
+        </button>
+        <button class="tab-item" role="tab" aria-selected="false" data-tab="1">
+          <span class="tab-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 11l3 3L22 4"/><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/></svg></span>
+          <span class="tab-text"><b>Katılım Durumu</b><span>Geliyor · gelmiyor · belirsiz · bekliyor — net koltuk sayısı.</span></span>
+        </button>
+        <button class="tab-item" role="tab" aria-selected="false" data-tab="2">
+          <span class="tab-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 2L11 13M22 2l-7 20-4-9-9-4 20-7z"/></svg></span>
+          <span class="tab-text"><b>Davet Gönder</b><span>Kişiselleştirilmiş şablon + özet, tek tıkla WhatsApp'tan gönderim.</span></span>
+        </button>
+        <button class="tab-item" role="tab" aria-selected="false" data-tab="3">
+          <span class="tab-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75"/></svg></span>
+          <span class="tab-text"><b>Davetli Listesi</b><span>Excel ile içe aktarma, telefon doğrulama, kaynak ve davet durumu.</span></span>
+        </button>
+        <button class="tab-item" role="tab" aria-selected="false" data-tab="4">
+          <span class="tab-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4M8 2v4M3 10h18"/></svg></span>
+          <span class="tab-text"><b>Etkinlik Takvimi</b><span>Tüm etkinlikler aylık takvimde renk kodlu, hızlı ekleme.</span></span>
+        </button>
+      </div>
+
+      <!-- Stage -->
+      <div class="tabs-stage">
+        <div class="browser tabs-browser">
+          <div class="browser-bar">
+            <span class="dots"><i></i><i></i><i></i></span>
+            <span class="url" id="tabUrl">panel.inviteasily.com</span>
+          </div>
+          <button class="tabs-viewport" id="tabsViewport" aria-label="Ekranı büyüt">
+            <img class="tab-shot is-active" src="assets/screens/1.png" alt="Genel bakış paneli — özet kartları, yaklaşan etkinlikler ve son aktiviteler" data-url="panel.inviteasily.com" loading="lazy">
+            <img class="tab-shot" src="assets/screens/9.png" alt="Katılım durumu ekranı — geliyor, gelmiyor, belirsiz, bekliyor" data-url="panel.inviteasily.com/katilim" loading="lazy">
+            <img class="tab-shot" src="assets/screens/10.png" alt="Davet gönderme ekranı — mesaj şablonu ve gönderim özeti" data-url="panel.inviteasily.com/davet-gonder" loading="lazy">
+            <img class="tab-shot" src="assets/screens/8.png" alt="Davetli listesi ekranı — Excel yükleme, telefon, koltuk, kaynak ve davet durumu" data-url="panel.inviteasily.com/davetliler" loading="lazy">
+            <img class="tab-shot" src="assets/screens/2.png" alt="Etkinlik takvimi ekranı — aylık görünümde renk kodlu etkinlikler" data-url="panel.inviteasily.com/takvim" loading="lazy">
+            <span class="zoom-hint"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="7"/><path d="M21 21l-4.35-4.35M11 8v6M8 11h6"/></svg>Büyüt</span>
+          </button>
+        </div>
+        <div class="tabs-progress" aria-hidden="true"><span id="tabsBar"></span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Lightbox -->
+<div class="lightbox" id="lightbox" aria-hidden="true" role="dialog" aria-label="Ekran önizleme">
+  <button class="lb-close" id="lbClose" aria-label="Kapat"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 6L6 18M6 6l12 12"/></svg></button>
+  <button class="lb-nav lb-prev" id="lbPrev" aria-label="Önceki"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M15 18l-6-6 6-6"/></svg></button>
+  <figure class="lb-figure">
+    <img id="lbImg" alt="">
+    <figcaption id="lbCap"></figcaption>
+  </figure>
+  <button class="lb-nav lb-next" id="lbNext" aria-label="Sonraki"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 18l6-6-6-6"/></svg></button>
+</div>
+
+<!-- ============ BENEFITS ============ -->
+<section class="section bg-white" id="neden">
+  <div class="container">
+    <div class="section-head reveal">
+      <span class="eyebrow">Neden Inviteasily</span>
+      <h2 class="display">Tek bir panel, dört somut kazanç</h2>
+    </div>
+    <div class="benefit-list">
+      <div class="benefit reveal d1">
+        <div class="benefit-num">01</div>
+        <div class="benefit-main">
+          <h3>Daha az masraf</h3>
+          <p>Gerçek katılım sayısını önceden bilin; gelmeyecek misafir için yapılan fazla yemek, masa, ikram ve personel masrafını kesin.</p>
+        </div>
+        <div class="benefit-tag"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 1v22M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>Net sayı = net bütçe</div>
+      </div>
+      <div class="benefit reveal d1">
+        <div class="benefit-num">02</div>
+        <div class="benefit-main">
+          <h3>Sıfır manuel takip</h3>
+          <p>Davetli normal Türkçe yazar, yapay zekâ anlar. Cevapları elle Excel'e işlemek, tek tek telefon açmak tarihe karışır.</p>
+        </div>
+        <div class="benefit-tag"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 8v4l3 2"/><circle cx="12" cy="12" r="9"/></svg>Saatler değil, dakikalar</div>
+      </div>
+      <div class="benefit reveal d1">
+        <div class="benefit-num">03</div>
+        <div class="benefit-main">
+          <h3>Gerçek zamanlı netlik</h3>
+          <p>Cevaplar geldiği anda panele düşer. Etkinliğe günler kala kaç kişinin kesinleştiğini her an görürsünüz — belirsizlik biter.</p>
+        </div>
+        <div class="benefit-tag"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 3v18h18"/><path d="M7 14l4-4 3 3 5-6"/></svg>Anlık dashboard</div>
+      </div>
+      <div class="benefit reveal d1">
+        <div class="benefit-num">04</div>
+        <div class="benefit-main">
+          <h3>Salon kendi reklamını yapar</h3>
+          <p>Her etkinlikte binlerce kişiye salon adınızla davet gider. Bu, salonunuz için sürekli ve organik bir tanıtım demek.</p>
+        </div>
+        <div class="benefit-tag"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2l2.4 7.4H22l-6 4.6 2.3 7.4-6.3-4.6L5.7 21.4 8 14 2 9.4h7.6z"/></svg>Organik görünürlük</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ AUDIENCE ============ -->
+<section class="section bg-ivory" id="kimler">
+  <div class="container">
+    <div class="section-head center reveal">
+      <span class="eyebrow center">Kimler için</span>
+      <h2 class="display">Etkinlik yöneten herkes için</h2>
+    </div>
+    <div class="aud-grid">
+      <div class="aud-card feature reveal d1">
+        <div class="aud-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 21h18M5 21V7l8-4v18M19 21V11l-6-4"/><path d="M9 9v.01M9 12v.01M9 15v.01M9 18v.01"/></svg></div>
+        <h3>Düğün &amp; Davet Salonları</h3>
+        <p>Net misafir sayısına göre mutfak ve servis planlayın, masrafı kontrol altına alın.</p>
+        <ul>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg>Net katılımla doğru planlama</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg>Telefon trafiğinden kurtulma</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg>Salon adıyla organik tanıtım</li>
+        </ul>
+      </div>
+      <div class="aud-card reveal d2">
+        <div class="aud-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/></svg></div>
+        <h3>Organizasyon Firmaları</h3>
+        <p>Birden çok etkinliği aynı anda, tek panelden, manuel takibe bunalmadan yönetin.</p>
+        <ul>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg>Çoklu etkinlik, tek panel</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg>Operasyonel verimlilik</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg>Otomatik soru-cevap</li>
+        </ul>
+      </div>
+      <div class="aud-card reveal d3">
+        <div class="aud-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 21h18M5 21V5a1 1 0 0 1 1-1h8a1 1 0 0 1 1 1v16M15 9h3a1 1 0 0 1 1 1v11"/><path d="M8 7h.01M11 7h.01M8 11h.01M11 11h.01M8 15h.01M11 15h.01"/></svg></div>
+        <h3>Oteller</h3>
+        <p>Balo salonu, kongre ve etkinlik bölümleri olan oteller için: davet ve katılım sürecini tek panelden yönetin.</p>
+        <ul>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg>Banquet &amp; etkinlik departmanı</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg>Net katılımla servis planlama</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg>Kurumsal misafir iletişimi</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ FAQ ============ -->
+<section class="section bg-white" id="sss">
+  <div class="container">
+    <div class="section-head center reveal">
+      <span class="eyebrow center">Sık Sorulan Sorular</span>
+      <h2 class="display">Aklınızdaki sorular</h2>
+    </div>
+    <div class="faq reveal">
+      <div class="faq-item">
+        <button class="faq-q">Kurulumu zor mu, teknik bilgi gerekir mi?<span class="chev"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg></span></button>
+        <div class="faq-a"><div class="faq-a-inner">Hayır. Excel'i yükleyin, mesaj şablonunu seçin ve gönderin — birkaç dakikada ilk davetinizi çıkarırsınız. Salon ekibiniz herhangi bir eğitim almadan rahatça kullanabilir.</div></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q">Davetliler yapay zekâyla konuştuğunu anlar, sıkılır mı?<span class="chev"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg></span></button>
+        <div class="faq-a"><div class="faq-a-inner">Cevaplar doğal, sıcak bir Türkçe ile verilir. Yapay zekâ konuşmayı gereksiz uzatmaz; belirli bir mesaj sayısından sonra son bir bilgilendirme yapıp nazikçe susar.</div></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q">Verilerim güvende mi?<span class="chev"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg></span></button>
+        <div class="faq-a"><div class="faq-a-inner">Her salonun verisi birbirinden tamamen izoledir; yalnızca kendi etkinliklerinizi ve davetlilerinizi görürsünüz. Giriş, e-posta ve şifre ile korunur.</div></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q">Yurt dışındaki misafirler için çalışır mı?<span class="chev"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg></span></button>
+        <div class="faq-a"><div class="faq-a-inner">Sistem şu an Türkiye telefon numaralarına optimize edilmiştir. İhtiyaç halinde uluslararası numaralar için kapsam genişletilebilir — demo görüşmesinde ihtiyacınızı netleştirelim.</div></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q">Fiyatlandırma nasıl?<span class="chev"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg></span></button>
+        <div class="faq-a"><div class="faq-a-inner">Fiyatlandırma; salonunuzun büyüklüğü ve aylık etkinlik sayınıza göre belirlenir. Size en uygun paketi demo görüşmesinde birlikte konuşalım. İlk salonlarımıza özel koşullarımız mevcut.</div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ CLOSING CTA + FORM ============ -->
+<section class="section cta-band bg-navy" id="demo">
+  <div class="container cta-grid">
+    <div class="cta-left reveal">
+      <span class="eyebrow center">Başlayalım</span>
+      <h2>Bir sonraki etkinliğinizi<br><span class="gold">stres olmadan</span> planlayın.</h2>
+      <p class="lead">Inviteasily'nin salonunuza nasıl değer kattığını 15 dakikalık kısa bir demoda gösterelim. Bilgi alın, sorularınızı sorun, dilerseniz hemen başlayın.</p>
+      <div class="cta-contacts">
+        <a href="mailto:info@inviteasily.com" class="cta-contact">
+          <span class="ci"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-10 5L2 7"/></svg></span>
+          <span><b>info@inviteasily.com</b><span>E-posta ile bize ulaşın</span></span>
+        </a>
+        <a href="#" class="cta-contact">
+          <span class="ci"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/></svg></span>
+          <span><b>WhatsApp'tan yazın</b><span>Bize de WhatsApp'tan ulaşabilirsiniz</span></span>
+        </a>
+      </div>
+    </div>
+
+    <div class="form-card reveal d1">
+      <form id="demoForm" novalidate>
+        <h3>Demo planlayın</h3>
+        <p class="sub">Bilgilerinizi bırakın, size en kısa sürede dönelim.</p>
+        <div class="field">
+          <label for="f-name">Ad Soyad <span class="req">*</span></label>
+          <input type="text" id="f-name" name="name" placeholder="Adınız Soyadınız" required>
+        </div>
+        <div class="field">
+          <label for="f-org">Salon / Firma Adı <span class="req">*</span></label>
+          <input type="text" id="f-org" name="org" placeholder="Salonunuzun adı" required>
+        </div>
+        <div class="field-row">
+          <div class="field">
+            <label for="f-phone">Telefon <span class="req">*</span></label>
+            <input type="tel" id="f-phone" name="phone" placeholder="05XX XXX XX XX" required>
+          </div>
+          <div class="field">
+            <label for="f-email">E-posta <span class="req">*</span></label>
+            <input type="email" id="f-email" name="email" placeholder="ornek@salon.com" required>
+          </div>
+        </div>
+        <div class="field">
+          <label for="f-events">Aylık ortalama etkinlik sayısı</label>
+          <select id="f-events" name="events">
+            <option value="">Seçiniz (opsiyonel)</option>
+            <option>1 – 5</option>
+            <option>6 – 15</option>
+            <option>16 – 30</option>
+            <option>30+</option>
+          </select>
+        </div>
+        <button type="submit" class="btn btn-gold btn-lg">Demo İste &amp; Bilgi Al
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+        </button>
+        <p class="form-note">Formu göndererek sizinle iletişime geçmemize izin vermiş olursunuz.</p>
+      </form>
+      <div class="form-success" id="formSuccess">
+        <div class="ok-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg></div>
+        <h3>Talebiniz alındı!</h3>
+        <p>Teşekkürler. Ekibimiz en kısa sürede sizinle iletişime geçecek.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ FOOTER ============ -->
+<footer class="footer">
+  <div class="container">
+    <div class="footer-top">
+      <div class="footer-brand">
+        <img src="assets/logo/InviteEasily-logo-cream.svg" alt="Inviteasily">
+        <p>Düğün ve davet salonları için WhatsApp tabanlı, yapay zekâ destekli davet & katılım yönetim paneli.</p>
+        <div class="slogan">Events, managed easily.</div>
+      </div>
+      <div class="footer-col">
+        <h4>Ürün</h4>
+        <ul>
+          <li><a href="#nasil">Nasıl Çalışır</a></li>
+          <li><a href="#ozellikler">Özellikler</a></li>
+          <li><a href="#ai">Yapay Zekâ</a></li>
+          <li><a href="#vitrin">Panelden Görünüm</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>İletişim</h4>
+        <ul>
+          <li><a href="mailto:info@inviteasily.com">info@inviteasily.com</a></li>
+          <li><a href="#demo">Demo İste</a></li>
+          <li><a href="#sss">Sık Sorulan Sorular</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bot">
+      <span>© 2026 Inviteasily. Tüm hakları saklıdır.</span>
+      <span>Türkiye'de geliştirildi · WhatsApp &amp; yapay zekâ ile</span>
+    </div>
+  </div>
+</footer>
+
+<!-- Floating WhatsApp -->
+<a href="#demo" class="wa-fab" aria-label="WhatsApp ile iletişim">
+  <svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.5 14.4c-.3-.15-1.77-.87-2.04-.97-.27-.1-.47-.15-.67.15-.2.3-.77.97-.94 1.17-.17.2-.35.22-.65.07-.3-.15-1.26-.46-2.4-1.48-.89-.79-1.49-1.77-1.66-2.07-.17-.3-.02-.46.13-.61.13-.13.3-.35.45-.52.15-.17.2-.3.3-.5.1-.2.05-.37-.02-.52-.07-.15-.67-1.62-.92-2.22-.24-.58-.49-.5-.67-.51l-.57-.01c-.2 0-.52.07-.8.37-.27.3-1.04 1.02-1.04 2.49 0 1.47 1.07 2.89 1.22 3.09.15.2 2.1 3.2 5.08 4.49.71.31 1.26.49 1.69.62.71.23 1.36.2 1.87.12.57-.08 1.77-.72 2.02-1.42.25-.7.25-1.3.17-1.42-.07-.13-.27-.2-.57-.35zM12 2a10 10 0 0 0-8.6 15.06L2 22l5.06-1.33A10 10 0 1 0 12 2z"/></svg>
+</a>
+
+<template id="__bundler_thumbnail">
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
+    <rect width="100" height="100" fill="#0F172A"/>
+    <circle cx="42" cy="52" r="11" fill="none" stroke="#F4EFE6" stroke-width="3"/>
+    <circle cx="54" cy="52" r="11" fill="none" stroke="#C9A24D" stroke-width="3"/>
+    <path d="M60 36 l1.6 4 4 1.6 -4 1.6 -1.6 4 -1.6 -4 -4 -1.6 4 -1.6z" fill="#C9A24D"/>
+  </svg>
+</template>
+
+<script src="script.js"></script>
+</body>
+</html>
