@@ -6,6 +6,13 @@
 
   var prefersReduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
+  /* ---------- Supabase client ---------- */
+  var SUPABASE_URL = 'https://vyiaaizvexowzdifbmnl.supabase.co';
+  var SUPABASE_ANON_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InZ5aWFhaXp2ZXhvd3pkaWZibW5sIiwicm9sZSI6ImFub24iLCJpYXQiOjE3ODExNjQxODgsImV4cCI6MjA5Njc0MDE4OH0.lqWOZjRRhXIm2tyZBuBlFsAls-PJtA1KPU5Z6tuxdwo';
+  var supabase = (window.supabase && typeof window.supabase.createClient === 'function')
+    ? window.supabase.createClient(SUPABASE_URL, SUPABASE_ANON_KEY)
+    : null;
+
   /* ---------- Header solid on scroll ---------- */
   var header = document.getElementById('header');
   function onScroll() {
@@ -200,6 +207,7 @@
   var form = document.getElementById('demoForm');
   var success = document.getElementById('formSuccess');
   if (form) {
+    var submitBtn = form.querySelector('button[type="submit"]');
     form.addEventListener('submit', function (e) {
       e.preventDefault();
       var valid = true;
@@ -220,8 +228,34 @@
         email.style.boxShadow = '0 0 0 3px rgba(185,28,28,.1)';
       }
       if (!valid) return;
-      form.style.display = 'none';
-      if (success) success.classList.add('show');
+
+      function showSuccess() {
+        form.style.display = 'none';
+        if (success) success.classList.add('show');
+      }
+
+      // Supabase kullanılamıyorsa yine de başarı göster (form bozulmasın)
+      if (!supabase) { showSuccess(); return; }
+
+      var payload = {
+        name: form.querySelector('#f-name').value.trim(),
+        org: form.querySelector('#f-org').value.trim(),
+        phone: form.querySelector('#f-phone').value.trim(),
+        email: form.querySelector('#f-email').value.trim(),
+        events: (form.querySelector('#f-events').value || '').trim() || null
+      };
+
+      if (submitBtn) { submitBtn.disabled = true; submitBtn.style.opacity = '.7'; }
+
+      supabase.from('demo_requests').insert(payload).then(function (res) {
+        if (res.error) {
+          console.error('Supabase insert error:', res.error);
+          if (submitBtn) { submitBtn.disabled = false; submitBtn.style.opacity = ''; }
+          alert('Talebiniz gönderilemedi, lütfen tekrar deneyin.');
+          return;
+        }
+        showSuccess();
+      });
     });
     // clear error on input
     form.querySelectorAll('input, select').forEach(function (field) {
